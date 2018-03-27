@@ -1,6 +1,6 @@
 ## RESTFUL API 简介
 BitPlus为用户提供一套RESTFUL API，用户可快速接入BitPlus的交易系统，实现自动化交易。
-访问域名：https://testing.websvr.com
+访问域名：http://api.bit.plus/
 
 API提供一下功能:  
 1. 市场行情信息查询  

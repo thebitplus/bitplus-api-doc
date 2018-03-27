@@ -118,14 +118,14 @@ symbols | array | 市场信息
 symbol list:    
  
 	参数名 | 类型 | 描述
----- | ---- | ----
-symbol | string | 市场交易对
-name | string | 市场名称
-status | string | 市场开放状态: nonsupport=不支持; auditing=审核中; online=已上线; offline=已下线
-base_coin | string | 基础币种
-base_precision | string | 数量人精度位数
-quote_coin | string | 计价币种
-quote_precision | string | 价格精度位数
+    ---- | ---- | ----
+    symbol | string | 市场交易对
+    name | string | 市场名称
+    status | string | 市场开放状态: nonsupport=不支持; auditing=审核中; online=已上线; offline=已下线
+    base_coin | string | 基础币种
+    base_precision | string | 数量人精度位数
+    quote_coin | string | 计价币种
+    quote_precision | string | 价格精度位数
 
 响应例子：  
 	
@@ -152,16 +152,16 @@ quote_precision | string | 价格精度位数
 请求参数：
 
 	参数名 | 是否必须 | 类型 | 描述
----- | ---- | ---- | ----
-symbol | 是 | string | 市场交易对
-limit | 否 | integer | default:20; limit: min-1,max-500
+    ---- | ---- | ---- | ----
+    symbol | 是 | string | 市场交易对
+    limit | 否 | integer | default:20; limit: min-1,max-500
 
 响应数据：    
  
 	参数名 | 类型 | 描述
----- | ---- | ----
-sell | array | 卖盘，格式：[price(价格），volume(数量)]，按价格price升序
-buy | array | 买盘，格式：[price(价格），volume(数量)]，按价格price降序
+    ---- | ---- | ----
+    sell | array | 卖盘，格式：[price(价格），volume(数量)]，按价格price升序
+    buy | array | 买盘，格式：[price(价格），volume(数量)]，按价格price降序
 
 响应例子：  
 
@@ -193,19 +193,19 @@ buy | array | 买盘，格式：[price(价格），volume(数量)]，按价格pr
 请求参数：
 
 	参数名 | 是否必须 | 类型 | 描述
----- | ---- | ---- | ----
-symbol | 是 | string | 市场交易对
-limit | 否 | integer | default:20; limit: min-1,max-500
+    ---- | ---- | ---- | ----
+    symbol | 是 | string | 市场交易对
+    limit | 否 | integer | default:20; limit: min-1,max-500
 
 响应数据：        
  
 	参数名 | 类型 | 描述
----- | ---- | ----
-id | string | 成交id
-price | decimal | 成交价格
-volume | decimal | 成交量
-type | string | 主动成交方向：sell,buy
-matched_at | string | 成交时间
+    ---- | ---- | ----
+    id | string | 成交id
+    price | decimal | 成交价格
+    volume | decimal | 成交量
+    type | string | 主动成交方向：sell,buy
+    matched_at | string | 成交时间
 
 响应例子：  
 	
@@ -231,21 +231,21 @@ matched_at | string | 成交时间
 请求参数：
 
 	参数名 | 是否必须 | 类型 | 描述
----- | ---- | ---- | ----
-timestamp | 是 | integer | 时间戳（毫秒）
-appKey | 是 | string | API 访问密钥
-signature | 是 | string | 签名
-receiveWindow | 否 | integer | default:5000,请求有效时间
+    ---- | ---- | ---- | ----
+    timestamp | 是 | integer | 时间戳（毫秒）
+    appKey | 是 | string | API 访问密钥
+    signature | 是 | string | 签名
+    receiveWindow | 否 | integer | default:5000,请求有效时间
 
 响应数据：        
  
 	参数名 | 类型 | 描述
----- | ---- | ----
-coin | string | 币种
-total | decimal | 总余额  
-available | decimal | 可用余额
-frozen | decimal | 冻结金额
-locked | decimal | 锁定金额
+    ---- | ---- | ----
+    coin | string | 币种
+    total | decimal | 总余额  
+    available | decimal | 可用余额
+    frozen | decimal | 冻结金额
+    locked | decimal | 锁定金额
 
 响应例子：  
 	
@@ -271,23 +271,23 @@ locked | decimal | 锁定金额
 请求参数：
 
 	参数名 | 是否必须 | 类型 | 描述
----- | ---- | ---- | ----
-appKey | 是 | string | API 访问密钥
-signature | 是 | string | 签名
-symbol | 是 | string | 市场交易对
-timestamp | 是 | integer | 时间戳（毫秒）
-limit | 否 | integer | default:20; limit: min-1,max-500
-receiveWindow | 否 | integer | default:5000,请求有效时间
+    ---- | ---- | ---- | ----
+    appKey | 是 | string | API 访问密钥
+    signature | 是 | string | 签名
+    symbol | 是 | string | 市场交易对
+    timestamp | 是 | integer | 时间戳（毫秒）
+    limit | 否 | integer | default:20; limit: min-1,max-500
+    receiveWindow | 否 | integer | default:5000,请求有效时间
 
 响应数据：        
  
 	参数名 | 类型 | 描述
----- | ---- | ----
-id | string | 成交id
-price | decimal | 成交价格
-volume | decimal | 成交量
-type | string | 主动成交方向：sell,buy
-matched_at | string | 成交时间
+    ---- | ---- | ----
+    id | string | 成交id
+    price | decimal | 成交价格
+    volume | decimal | 成交量
+    type | string | 主动成交方向：sell,buy
+    matched_at | string | 成交时间
 
 响应例子：  
 	
@@ -312,23 +312,23 @@ matched_at | string | 成交时间
 请求参数：
 
 	参数名 | 是否必须 | 类型 | 描述
----- | ---- | ---- | ----
-appKey | 是 | string | API 访问密钥
-signature | 是 | string | 签名
-timestamp | 是 | integer | 时间戳（毫秒）
-symbol | 是 | string | 市场交易对
-type | 是 | string | 委托类型：buy-买单，sell-卖单
-mode | 是 | string | 交易模式：limit-限价交易
-price | 是 | decimal | 报价
-volume | 是 | decimal | 委托量
-receiveWindow | 否 | integer | default:5000,请求有效时间
+    ---- | ---- | ---- | ----
+    appKey | 是 | string | API 访问密钥
+    signature | 是 | string | 签名
+    timestamp | 是 | integer | 时间戳（毫秒）
+    symbol | 是 | string | 市场交易对
+    type | 是 | string | 委托类型：buy-买单，sell-卖单
+    mode | 是 | string | 交易模式：limit-限价交易
+    price | 是 | decimal | 报价
+    volume | 是 | decimal | 委托量
+    receiveWindow | 否 | integer | default:5000,请求有效时间
 
 响应数据：        
  
 	参数名 | 类型 | 描述
----- | ---- | ----
-order_no | string | 订单号
-status | string | 状态:交易状态：awaiting-挂单中,filled-已完成,cancelled-已撤销
+    ---- | ---- | ----
+    order_no | string | 订单号
+    status | string | 状态:交易状态：awaiting-挂单中,filled-已完成,cancelled-已撤销
 
 响应例子：  
 	
@@ -348,19 +348,19 @@ status | string | 状态:交易状态：awaiting-挂单中,filled-已完成,canc
 请求参数：
 
 	参数名 | 是否必须 | 类型 | 描述
----- | ---- | ---- | ----
-appKey | 是 | string | API 访问密钥
-signature | 是 | string | 签名
-timestamp | 是 | integer | 时间戳（毫秒）
-order_no | 是 | string | 订单号
-receiveWindow | 否 | integer | default:5000,请求有效时间
+    ---- | ---- | ---- | ----
+    appKey | 是 | string | API 访问密钥
+    signature | 是 | string | 签名
+    timestamp | 是 | integer | 时间戳（毫秒）
+    order_no | 是 | string | 订单号
+    receiveWindow | 否 | integer | default:5000,请求有效时间
 
 响应数据：        
  
 	参数名 | 类型 | 描述
----- | ---- | ----
-order_no | string | 订单号
-status | string | 状态:交易状态：awaiting-挂单中,filled-已完成,cancelled-已撤销
+    ---- | ---- | ----
+    order_no | string | 订单号
+    status | string | 状态:交易状态：awaiting-挂单中,filled-已完成,cancelled-已撤销
 
 响应例子：  
 	
@@ -380,28 +380,28 @@ status | string | 状态:交易状态：awaiting-挂单中,filled-已完成,canc
 请求参数：
 
 	参数名 | 是否必须 | 类型 | 描述
----- | ---- | ---- | ----
-appKey | 是 | string | API 访问密钥
-signature | 是 | string | 签名
-timestamp | 是 | integer | 时间戳（毫秒）
-order_no | 是 | string | 订单号
-receiveWindow | 否 | integer | default:5000,请求有效时间
+    ---- | ---- | ---- | ----
+    appKey | 是 | string | API 访问密钥
+    signature | 是 | string | 签名
+    timestamp | 是 | integer | 时间戳（毫秒）
+    order_no | 是 | string | 订单号
+    receiveWindow | 否 | integer | default:5000,请求有效时间
 
 响应数据：        
  
 	参数名 | 类型 | 描述
----- | ---- | ----
-order_no | string | 订单号
-symbol | string | 市场交易对
-type | 是 | string | 委托类型：buy-买单，sell-卖单
-mode | 是 | string | 交易模式：limit-限价交易
-price | decimal | 报价
-volume | decimal | 委托量
-volume_awaiting | decimal | 等待撮合的委托量
-volume_matched | decimal | 撮合数量
-volume_awaiting | decimal | 等待撮合数量
-completed_at | string | 完成时间
-status | string | 状态:交易状态：awaiting-挂单中,filled-已完成,cancelled-已撤销
+    ---- | ---- | ----
+    order_no | string | 订单号
+    symbol | string | 市场交易对
+    type | 是 | string | 委托类型：buy-买单，sell-卖单
+    mode | 是 | string | 交易模式：limit-限价交易
+    price | decimal | 报价
+    volume | decimal | 委托量
+    volume_awaiting | decimal | 等待撮合的委托量
+    volume_matched | decimal | 撮合数量
+    volume_awaiting | decimal | 等待撮合数量
+    completed_at | string | 完成时间
+    status | string | 状态:交易状态：awaiting-挂单中,filled-已完成,cancelled-已撤销
 
 响应例子：  
 	
@@ -431,31 +431,31 @@ status | string | 状态:交易状态：awaiting-挂单中,filled-已完成,canc
 请求参数：
 
 	参数名 | 是否必须 | 类型 | 描述
----- | ---- | ---- | ----
-appKey | 是 | string | API 访问密钥
-signature | 是 | string | 签名
-timestamp | 是 | integer | 时间戳（毫秒）
-symbol | 是 | string | 市场交易对
-page | 否 | integer | 页码，default：1
-pageNum | 否 | integer | 页面记录数，default：20
-receiveWindow | 否 | integer | default:5000,请求有效时间
+    ---- | ---- | ---- | ----
+    appKey | 是 | string | API 访问密钥
+    signature | 是 | string | 签名
+    timestamp | 是 | integer | 时间戳（毫秒）
+    symbol | 是 | string | 市场交易对
+    page | 否 | integer | 页码，default：1
+    pageNum | 否 | integer | 页面记录数，default：20
+    receiveWindow | 否 | integer | default:5000,请求有效时间
 
 响应数据：        
 委托单列表
  
 	参数名 | 类型 | 描述
----- | ---- | ----
-order_no | string | 订单号
-symbol | string | 市场交易对
-type | 是 | string | 委托类型：buy-买单，sell-卖单
-mode | 是 | string | 交易模式：limit-限价交易
-price | string | 报价
-volume | string | 委托量
-volume_awaiting | string | 等待撮合的委托量
-volume_matched | string | 撮合数量
-volume_awaiting | string | 等待撮合数量
-completed_at | string | 完成时间
-status | string | 状态:交易状态：awaiting-挂单中,filled-已完成,cancelled-已撤销
+    ---- | ---- | ----
+    order_no | string | 订单号
+    symbol | string | 市场交易对
+    type | 是 | string | 委托类型：buy-买单，sell-卖单
+    mode | 是 | string | 交易模式：limit-限价交易
+    price | string | 报价
+    volume | string | 委托量
+    volume_awaiting | string | 等待撮合的委托量
+    volume_matched | string | 撮合数量
+    volume_awaiting | string | 等待撮合数量
+    completed_at | string | 完成时间
+    status | string | 状态:交易状态：awaiting-挂单中,filled-已完成,cancelled-已撤销
 
 响应例子：  
 	
