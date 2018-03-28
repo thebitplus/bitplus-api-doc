@@ -19,7 +19,7 @@ data | array | 数据
 
 ### 公共API
 #### 测试连通性
-	GET /site/ping
+	GET /v1/site/ping
 描述：  
 请求参数：无    
 响应数据：  
@@ -32,7 +32,7 @@ data | array | 数据
 	}
 
 #### 获取服务器时间戳
-	GET /site/timestamp
+	GET /v1/site/timestamp
 描述：  
 请求参数：无    
 响应数据：    
@@ -52,7 +52,7 @@ serverTime | integer | 服务器时间戳（毫秒）
 	}
 
 #### 获取交易所规则信息
-	GET /site/exchange-info
+	GET /v1/site/exchange-info
 描述：  
 请求参数：无    
 响应数据：    
